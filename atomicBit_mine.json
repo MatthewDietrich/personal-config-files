@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "final_space": false,
+  "osc99": true,
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "session",
+          "style": "plain",
+          "properties": {
+            "prefix": "┌─[",
+            "postfix": "]─",
+            "template": "<#ffff55>{{ .UserName }}</><#ff5555>@</><#55ff55>{{ .ComputerName }}</>"
+          }
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "#ff5555",
+          "properties": {
+            "prefix": "<#ffffff>[</>",
+            "postfix": "<#ffffff>]</>",
+            "style": "mixed",
+            "enable_hyperlink": true
+          }
+        },
+        {
+          "type": "root",
+          "style": "plain",
+          "foreground": "#FF9248",
+          "properties": {
+            "prefix": "<#ffffff>─[</>",
+            "postfix": "<#ffffff>]</>",
+            "root_icon": "#"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "os",
+          "style": "plain",
+          "foreground": "#ffffff",
+          "properties": {
+            "prefix": "<#ffffff>[</>",
+            "postfix": "<#ffffff>]─</>"
+          }
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "#55FFFF",
+          "properties" : {
+            "threshold": 0,
+            "style": "dallas",
+            "prefix": "<#ffffff>─[</>",
+            "postfix": "s<#ffffff>]─</>"
+          }
+        },
+        {
+          "type": "time",
+          "style": "plain",
+          "foreground": "#04B1CA",
+          "properties": {
+            "prefix": "<#ffffff>[</>",
+            "postfix": "<#ffffff>]</>",
+            "time_format": "15:04:05"
+          }
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "properties": {
+            "prefix": "",
+            "postfix": "",
+            "text": "└─"
+          }
+        },
+        {
+          "type": "exit",
+          "style": "plain",
+          "foreground": "#ecf7fa",
+          "properties": {
+            "prefix": ">",
+            "display_exit_code": false,
+            "always_enabled": true,
+            "error_color": "#ef5350"
+          }
+        }
+      ]
+    }
+  ]
+}
